@@ -15,7 +15,7 @@ public class PivotMedian implements PivotStrategie {
     }
 
     private <T extends Comparable<T>, U> int computeMedian(SchluesselWertPaar<T, U>[] a, int iLinks, int iRechts) {
-        int medianIndex;
+        int medianIndex = -1;
         int left = (int) a[iLinks].getSchluessel();
         int right = (int) a[iRechts].getSchluessel();
         int middle = (int) a[(iRechts+iLinks)/2].getSchluessel();
