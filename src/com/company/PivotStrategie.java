@@ -1,4 +1,4 @@
-package com.company.vorgaben;
+package com.company;
 
 /**
  * Interface for die Strategy zum Finden des Pivotelements.

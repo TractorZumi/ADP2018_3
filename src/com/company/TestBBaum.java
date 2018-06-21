@@ -1,4 +1,4 @@
-package com.company.vorgaben;
+package com.company;
 
 //muss angepasst werden!!!
 import SortierAlgorithmus;

@@ -1,4 +1,4 @@
-package com.company.vorgaben;
+package com.company;
 
 /**
  * Repräsentation eines Schlüssel-Wert-Paares.

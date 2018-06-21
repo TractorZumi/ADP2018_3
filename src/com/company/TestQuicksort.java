@@ -1,9 +1,6 @@
-package com.company.vorgaben;
+package com.company;
 
 //muss angepasst werden!!!
-import PivotStrategyMedian;
-import QuicksortLoesung;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

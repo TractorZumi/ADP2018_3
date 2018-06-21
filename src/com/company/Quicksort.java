@@ -1,4 +1,4 @@
-package com.company.vorgaben;
+package com.company;
 
 /**
  * Basisklasse für die Implementierung des Quicksort-Algorithmus.

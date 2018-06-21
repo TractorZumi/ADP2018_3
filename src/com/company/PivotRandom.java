@@ -1,8 +1,5 @@
 package com.company;
 
-import com.company.vorgaben.PivotStrategie;
-import com.company.vorgaben.SchluesselWertPaar;
-
 import java.util.Random;
 
 /**
