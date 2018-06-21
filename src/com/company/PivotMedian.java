@@ -9,9 +9,7 @@ import com.company.vorgaben.SchluesselWertPaar;
 public class PivotMedian implements PivotStrategie {
     @Override
     public <T extends Comparable<T>, U> int getIndex(SchluesselWertPaar<T, U>[] a, int iLinks, int iRechts) {
-        computeMedian(a, iLinks, iRechts);
-
-        return 0;
+        return computeMedian(a, iLinks, iRechts);
     }
 
     private <T extends Comparable<T>, U> int computeMedian(SchluesselWertPaar<T, U>[] a, int iLinks, int iRechts) {
