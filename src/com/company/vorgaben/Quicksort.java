@@ -11,7 +11,7 @@ public abstract class Quicksort<T extends Comparable<T>, U> {
     protected PivotStrategie pivotStrategy;
 
     /**
-     * Konstrucktor.
+     * Konstruktor.
      */
     public Quicksort(PivotStrategie pivotStrategy) {
         this.pivotStrategy = pivotStrategy;
