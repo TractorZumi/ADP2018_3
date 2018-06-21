@@ -40,13 +40,16 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
         T pivotKey = (T) a[pivotIndex].getSchluessel();
         if(a.length <= 1){ return; }
 
-        while(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) < 0) links += 1;
-        while(a[rechts].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0) rechts += 1;
-        if(links<rechts) swap(a,links,rechts);
+        while(links < rechts){
+            while(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) < 0) links += 1;
+            while(a[rechts].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0) rechts += 1;
+            if(links<rechts) swap(a,links,rechts);
+        }
+        if(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0){
 
-//        if(a[links].getSchluessel().compareTo(a[rechts].getSchluessel()) == -1){
-//
-//        }
+        }
+
+
     }
 
     private void swap(SchluesselWertPaar[] a, int links, int rechts) {
