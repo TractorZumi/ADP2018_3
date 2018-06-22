@@ -5,14 +5,9 @@ package com.company;
  */
 public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
 
-    /**
-     * Strategie zum finden des Pivotelements
-     */
-//    protected PivotStrategie pivotStrategie;
 
     /**
-     * Konstruktor.
-     *
+     * Konstruktor
      * @param pivotStrategy
      */
     public QuicksortLoesung(PivotStrategie pivotStrategy) {
@@ -26,7 +21,6 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
     @Override
     public void sortiere(SchluesselWertPaar[] a) {
         _sortiere(a, 0, a.length-1);
-
     }
 
     /**
@@ -51,7 +45,6 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
         if(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0) swap(a, links, pivotIndex);
         _sortiere(a,links,pivotIndex);
         _sortiere(a,pivotIndex+1, a.length-1);
-
     }
 
     /**

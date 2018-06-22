@@ -46,14 +46,14 @@ public class TestQuicksort {
     @Test
     public void test() {
         SchluesselWertPaar<Integer, String>[] daten = generiereDaten(10, DatenGenerierung.RUECKWAERTS);
-        //ausgeben("vorher: ", daten);
+        ausgeben("vorher: ", daten);
 
         qs.sortiere(daten);
         for (int i = 0; i < daten.length - 1; i++) {
             assertTrue("Daten sind nicht korrekt sortiert", daten[i].getSchluessel().compareTo(daten[i + 1].getSchluessel()) <= 0);
         }
 
-        //ausgeben("nachher: ", daten);
+        ausgeben("nachher: ", daten);
     }
 
     /**

@@ -1,8 +1,8 @@
 package com.company;
 
 //muss angepasst werden!!!
-import SortierAlgorithmus;
-import BBaumLoesung;
+//import SortierAlgorithmus;
+//import BBaumLoesung;
 
 import org.junit.Test;
 
@@ -20,8 +20,8 @@ public class TestBBaum {
      * Mit dieser Instanz wird getestet.
      */
     // TODO: Legen Sie hier eine Instanz Ihrer Implementierung an.
-    private BBaum<Integer, String> baum = //null;
-            new BBaumLoesung<>(2);
+    private BBaum<Integer, String> baum = null;
+//            new BBaumLoesung<>(2);
 
     @Test
     public void testEinfuegen() {
