@@ -45,14 +45,20 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
             while(a[rechts].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0) rechts += 1;
             if(links<rechts) swap(a,links,rechts);
         }
-        if(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0){
-
-        }
-
+        if(a[links].getSchluessel().compareTo(a[pivotIndex].getSchluessel()) > 0) swap(a, links, pivotIndex);
+        _sortiere(a,links,pivotIndex);
+        _sortiere(a,pivotIndex+1, a.length-1);
 
     }
 
+    /**
+     * 2 Elemente eines Arrays wechseln ihre Positionen (Indizes)
+     * @param a Array welches an genannten Indizes Elemente enthält
+     * @param links Index von Element1
+     * @param rechts Index von Element2
+     */
     private void swap(SchluesselWertPaar[] a, int links, int rechts) {
+        if(a.length-1 < links || a.length-1 < rechts) return;
         SchluesselWertPaar temp = a[links];
         a[links] = a[rechts];
         a[rechts] = temp;
