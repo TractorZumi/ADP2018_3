@@ -11,7 +11,12 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
      * @param pivotStrategy
      */
     public QuicksortLoesung(PivotStrategie pivotStrategy) {
+//        this.pivotStrategy = pivotStrategy;
         super(pivotStrategy);
+    }
+
+    public PivotStrategie getPivotStrategy(){
+        return super.pivotStrategy;
     }
 
     /**
@@ -32,9 +37,10 @@ public class QuicksortLoesung<T extends Comparable<T>, U> extends Quicksort {
     private void _sortiere(SchluesselWertPaar[] a, int links, int rechts) {
         if(a.length-1 < links || a.length-1 < rechts) throw new IllegalArgumentException("Beide Indizes müssen innerhalb des Arrays liegen (_sortiere())");
         if(links > rechts) throw new IllegalArgumentException("Index rechts muss größer sein als Index links.");
+        if(a.length <= 1) return;
         int pivotIndex = pivotStrategy.getIndex(a, links, rechts);
 //        T pivotKey = (T) a[pivotIndex].getSchluessel();
-        if(a.length <= 1){ return; }
+//        if(a.length <= 1){ return; }
 
         while(links < rechts){
             T pivotKey = (T) a[pivotIndex].getSchluessel();                             // Nochmal drüber nachdenken wo man das plazieren könnte

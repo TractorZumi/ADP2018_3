@@ -14,6 +14,9 @@ public class PivotStrategieTest {
     PivotStrategie psLast;
     SchluesselWertPaar<Integer, String>[] daten5;
     SchluesselWertPaar<Integer, String>[] daten4;
+    SchluesselWertPaar<Integer, String>[] daten1;
+    SchluesselWertPaar<Integer, String>[] daten0;
+
 
     SchluesselWertPaar<Integer, String> swp1;
     SchluesselWertPaar<Integer, String> swp2;
@@ -42,6 +45,9 @@ public class PivotStrategieTest {
         daten4[1] = swp1;
         daten4[2] = swp4;
         daten4[3] = swp2;
+        daten1 = new SchluesselWertPaar[1];
+        daten1[0] = swp1;
+        daten0 = new SchluesselWertPaar[0];
     }
 
     @Test
@@ -57,6 +63,7 @@ public class PivotStrategieTest {
         daten5[4] = swp3;
         assertEquals(4, psMedian.getIndex(daten5, 0, daten5.length-1));
         assertEquals(3, psMedian.getIndex(daten4, 0, daten4.length-1));
+        assertEquals(0, psMedian.getIndex(daten1, 0, daten1.length-1));
 
         /*
         Tests für PivotStrategyRandom
@@ -77,8 +84,6 @@ public class PivotStrategieTest {
         assertEquals(2, psLast.getIndex(daten5, 0, daten5.length-3));
         assertEquals(1, psLast.getIndex(daten5, 0, daten5.length-4));
         assertEquals(0, psLast.getIndex(daten5, 0, daten5.length-5));
-
-
     }
 
 }

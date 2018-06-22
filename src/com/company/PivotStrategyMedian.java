@@ -6,6 +6,9 @@ package com.company;
 public class PivotStrategyMedian implements PivotStrategie {
     @Override
     public <T extends Comparable<T>, U> int getIndex(SchluesselWertPaar<T, U>[] a, int iLinks, int iRechts) {
+        if(iLinks >= a.length || iRechts >= a.length) {
+            throw new IllegalArgumentException("Beide Indizes müssen sich innerhalb des Arrays befinden!");
+        }
         return computeMedian(a, iLinks, iRechts);
     }
 
